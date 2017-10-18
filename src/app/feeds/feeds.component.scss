@@ -1,0 +1,14 @@
+@import '../../assets/sass/colors';
+:host{
+  .feed-holder{
+    padding: 0 10px;
+    font-size: 1em;
+    .content {
+      min-height: 50px;
+      display: flex;
+      height: 100%;
+      padding: 15px 0;
+      border-bottom: 1px solid $color-light;
+    }
+  }
+}

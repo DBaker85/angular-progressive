@@ -1,0 +1,57 @@
+$MaterialIconsFontsPath: "../fonts/MaterialIcons" !default;
+
+
+@font-face {
+    font-family: 'Material Icons';
+    src: url('#{$MaterialIconsFontsPath}/MaterialIcons-Regular.eot');
+    src: url('#{$MaterialIconsFontsPath}/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'),
+         url('#{$MaterialIconsFontsPath}/MaterialIcons-Regular.woff') format('woff'),
+         url('#{$MaterialIconsFontsPath}/MaterialIcons-Regular.ttf') format('truetype'),
+         url('#{$MaterialIconsFontsPath}/MaterialIcons-Regular.svg#sourcesanspro-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*
+ * For full ist of Icons go here :
+ * https://material.io/icons/
+*/
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: $color-primary;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.icon-holder{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  background-color: $color-primary;
+  align-items: center;
+  justify-content: center;
+  .material-icons{
+    color: white;
+  }
+}
+

@@ -1,0 +1,24 @@
+<div class="logo">
+</div>
+<button mat-icon-button class="menu icon-holder clickable" (click)="toggleMenu()">
+  <mat-icon class="md-36" aria-label="menu">menu</mat-icon>
+</button>
+<mat-sidenav-container class="example-sidenav-fab-container">
+    <mat-sidenav #sidenav mode="over" opened="false" position="end">
+      <div class="example-scrolling-content">
+       <ul>
+        <li>
+          <mat-icon class="md-24" aria-label="account">account_box</mat-icon>
+          <span>Account</span>
+        </li>
+        <li>
+            <mat-icon class="md-24" aria-label="achievements">grade</mat-icon>
+            <span>Acheivements</span>
+          </li>
+        <li>
+          <mat-icon class="md-24" aria-label="settings">settings</mat-icon>
+          <span>Settings</span>
+        </li>
+       </ul>
+      </div>
+    </mat-sidenav>
