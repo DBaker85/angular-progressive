@@ -9,14 +9,13 @@ import 'rxjs/add/operator/map';
 })
 export class FeedsComponent implements OnInit {
 
-  public feeds: any;
+  private feeds: any;
 
-  constructor(private http: HttpClient) { }
-
-  ngOnInit() {
-      this.http.get('http://localhost:8888/feeds')
+    constructor(private http: HttpClient) { }
+    ngOnInit() {
+      this.http.get('http://localhost:8888/api/feed')
       .map(data => data)
       .subscribe(feeds => this.feeds = feeds);
-  }
+      }
 
 }
