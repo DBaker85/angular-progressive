@@ -17,37 +17,44 @@ app.use(express.static('public'));
 const feeds = [
   {
     'title':'Shortage of ether causes widespread panic',
-    'shorUrl':'ether_shortage',
+    'shortUrl':'ether_shortage',
+    'image':'https://source.unsplash.com/1600x900/?panic',
     'body': []
   },
   {
     'title':'Warlocks demand more respect and not to be refered to as hipsters',
-    'shorUrl':'warlock_hipsters',
+    'shortUrl':'warlock_hipsters',
+    'image':'https://source.unsplash.com/1600x900/?respect',
     'body' : []
   },
   {
-    'title':'Makers guild invent a whole new propulsion systems',
-    'shorUrl':'makers_propulsion',
+    'title':'Makers guild invent a whole new propulsion system',
+    'shortUrl':'makers_propulsion',
+    'image':'https://source.unsplash.com/1600x900/?invention',
     'body' : []
   },
   {
     'title':'Magic vs science, the eternal debate',
-    'shorUrl':'magic_science',
+    'shortUrl':'magic_science',
+    'image':'https://source.unsplash.com/1600x900/?debate',
     'body' : []
   },
   {
     'title':'Black lands reconquered by wandering mage',
-    'shorUrl':'blacklands_mage',
+    'shortUrl':'blacklands_mage',
+    'image':'https://source.unsplash.com/1600x900/?dark',
     'body' : []
   },
   {
-    'title':'Orlogs, fight or flight?',
-    'shorUrl':'orlog_fight',
+    'title':'Orlogs, fight or flee?',
+    'shortUrl':'orlog_fight',
+    'image':'https://source.unsplash.com/1600x900/?fight',
     'body' : []
   },
   {
     'title':'Pirates invade from the east',
-    'shorUrl':'pirates_invasion',
+    'shortUrl':'pirates_invasion',
+    'image':'https://source.unsplash.com/1600x900/?pirates',
     'body' : []
   },
 ]
@@ -69,7 +76,7 @@ app.get('/api/feed', function (req, res) {
 });
 
 app.get('/api/story/:shorturl', function (req, res) {
-  let feed = search(req.params.shorturl,'shorUrl',feeds);
+  let feed = search(req.params.shorturl,'shortUrl',feeds);
   request.get('https://baconipsum.com/api/?type=meat-and-filler&paras=10',function(error, response, body){
     feed.body = JSON.parse(body);
     res.send(feed);

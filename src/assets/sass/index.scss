@@ -2,6 +2,7 @@
 @import './colors';
 @import './icons';
 @import './material-theme';
+@import './typo';
 
 body{
   background-color: $color-background;
@@ -12,3 +13,4 @@ body{
 .clickable{
   cursor: pointer;
 }
+

@@ -11,6 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { FeedsComponent } from './feeds/feeds.component';
 import { LoaderComponent } from './loader/loader.component';
 import { FeedDetailComponent } from './feed-detail/feed-detail.component';
+import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FeedDetailComponent } from './feed-detail/feed-detail.component';
     MatIconModule,
     MatCardModule,
     HttpClientModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

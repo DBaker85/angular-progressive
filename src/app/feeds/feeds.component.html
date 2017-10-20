@@ -1,6 +1,12 @@
 
-<div *ngFor="let feed of feeds" class="feed-holder">
+<div *ngFor="let feed of feeds" class="feed-holder" (click)="goToDetailPage(feed.shortUrl)">
   <div class="content">
-    <span>{{feed.title}}</span>
+    <div class="image-holder">
+        <img [src]="feed.image">
+    </div>
+
+    <div class="container">
+        {{feed.title}}
+    </div>
   </div>
 </div>

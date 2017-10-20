@@ -4,15 +4,26 @@
     padding: 0 10px;
     font-size: 1em;
     .content {
-      min-height: 50px;
+      height: 50px;
       display: flex;
       height: 100%;
       padding: 15px 0;
       align-content: center;
       border-bottom: 1px solid $color-light;
-      span {
+      justify-content: space-between;
+      .image-holder{
+        width: 20vw;
+        height: 100%;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+      .container{
+        width: 70vw;
         align-self: center;
       }
+
     }
   }
 }

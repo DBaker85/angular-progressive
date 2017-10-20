@@ -1,7 +1,18 @@
 <ap-loader *ngIf="!modelLoaded"></ap-loader>
-<article class="article-holder" *ngIf="modelLoaded">
-  <p>{{feed.title}}</p>
-  <p *ngFor="let parapgraph of feed.body">
-    {{parapgraph}}
-  </p>
-</article>
+<div class="article-holder" *ngIf="modelLoaded">
+  <div class="go-back">
+      <button mat-icon-button (click)="goHome()">
+        <mat-icon class="md-24" aria-label="go back">keyboard_arrow_left</mat-icon>
+        <span>Back to feeds</span>
+      </button>
+  </div>
+  <div class="image-holder">
+      <img [src]="feed.image">
+  </div>
+  <article>
+    <h1>{{feed.title}}</h1>
+    <p *ngFor="let parapgraph of feed.body">
+      {{parapgraph}}
+    </p>
+  </article>
+</div>
