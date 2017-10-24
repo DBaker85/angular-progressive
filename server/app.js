@@ -4,6 +4,7 @@ app = express(),
 router = express.Router(),
 bodyParser = require('body-parser'),
 https = require('https'),
+path = require('path');
 request=require('request');
 /**npm
 * Use cors to solve CORS browser issues for local development
@@ -12,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.set('view engine', 'pug');
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'..','dist')));
 
 const feeds = [
   {
@@ -83,6 +84,7 @@ app.get('/api/story/:shorturl', function (req, res) {
   })
 
 });
+
 
 /**
 * Init Server. Log a message for user to know that server is on.
